@@ -1,0 +1,82 @@
+/* Basic layout for two columns */
+.container {
+    display: flex;
+    margin: 0px;
+}
+
+.div {
+    font-family: 'Inter', sans-serif;
+}
+
+/* First column styling (left column) */
+.left-div {
+    flex: 1; /* Takes up equal space as right div */
+    background-color: #FFFFFF;
+
+}
+
+/* Second column styling (right column with 3 blocks) */
+.right-div {
+    flex: 1; /* Takes up equal space as left div */
+    background-color: #FFFFFF;
+    padding: 10px;
+}
+.block {
+    display:flex;
+    flex: 2; /* Takes up equal space as left div */
+    background-color: #FFFFFF;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 200px;
+    border: 1px solid #ccc; /* Border around the navbar */
+    border-radius: 15px; /* Rounding the corners */
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+    background-color: #FFFFFF;
+    overflow: hidden;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Logo styling */
+.navbar img {
+    float: left;
+    width: 71x;
+    height: 41px;
+    margin-right: 10px;
+}
+
+/* Links styling */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Change link color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Active link styling */
+.navbar a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Responsive design: stack the links vertically on small screens */
+@media screen and (max-width: 600px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+        text-align: left;
+    }
+}
